@@ -29,8 +29,9 @@ func main() {
 	case RunScriptFuncName:
 		RunScript()
 	default:
+		os.Stderr.WriteString("This is in error stream\n")
 		fmt.Println(fmt.Errorf("unsopported operation '%s'", funcName))
-		panic("boom!")
+		//panic("boom!")
 	}
 }
 
